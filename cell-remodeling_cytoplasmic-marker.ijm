@@ -46,7 +46,7 @@ run("Options...", "iterations=1 count=1 black");
 #@ File (label = "Output directory", style = "directory") output
 #@ String (label = "File suffix", value = ".tif") suffix
 #@ String (label = "Name channel 1 ", value = "Recoverin") C1
-#@ String (label = "Name channel 1 ", value = "DAPI") C2
+#@ String (label = "Name channel 2 ", value = "DAPI") C2
 #@ Integer (label = "Median filter size ", value = 2) radius 
 #@ Integer (label = "Background subtraction rolling ball size ", value = 10) rolling
 #@ String (label = "Threshold Channel 1", choices={"Default","Huang","Intermodes","IsoData","Li","MaxEntropy","Mean","MinError(I)","Minimum","Moments","Otsu","Percentile","RenyiEntropy","Shanbhag","Triangle","Yen"}, style="listBox", value = "Mean") threshold1
