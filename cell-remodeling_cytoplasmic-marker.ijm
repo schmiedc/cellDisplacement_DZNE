@@ -11,6 +11,9 @@
  *				01307 Dresden
  *	            Germany
  *	            
+ *	   LICENSE: MIT License:
+ *	   			https://github.com/schmiedc/cellDisplacement_DZNE/blob/main/LICENSE
+ *	            
  *        BUGS:
  *       NOTES: y axis is inverted so 0 is at the top left corner of the image
  *       		Height of analyzed files is written into result table name
@@ -48,9 +51,9 @@ run("Options...", "iterations=1 count=1 black");
 #@ String (label = "Name channel 1 ", value = "Recoverin") C1
 #@ String (label = "Name channel 2 ", value = "DAPI") C2
 #@ Integer (label = "Median filter size ", value = 2) radius 
-#@ Integer (label = "Background subtraction rolling ball size ", value = 10) rolling
-#@ String (label = "Threshold Channel 1", choices={"Default","Huang","Intermodes","IsoData","Li","MaxEntropy","Mean","MinError(I)","Minimum","Moments","Otsu","Percentile","RenyiEntropy","Shanbhag","Triangle","Yen"}, style="listBox", value = "Mean") threshold1
-#@ String (label = "Threshold Channel 2", choices={"Default","Huang","Intermodes","IsoData","Li","MaxEntropy","Mean","MinError(I)","Minimum","Moments","Otsu","Percentile","RenyiEntropy","Shanbhag","Triangle","Yen"}, style="listBox", value = "Mean") threshold2
+#@ Integer (label = "Rolling ball size ", value = 10) rolling
+#@ String (label = "Threshold channel 1", choices={"Default","Huang","Intermodes","IsoData","Li","MaxEntropy","Mean","MinError(I)","Minimum","Moments","Otsu","Percentile","RenyiEntropy","Shanbhag","Triangle","Yen"}, style="listBox", value = "Mean") threshold1
+#@ String (label = "Threshold channel 2", choices={"Default","Huang","Intermodes","IsoData","Li","MaxEntropy","Mean","MinError(I)","Minimum","Moments","Otsu","Percentile","RenyiEntropy","Shanbhag","Triangle","Yen"}, style="listBox", value = "Mean") threshold2
 
 // ============================================================================
 // save settings

@@ -10,6 +10,9 @@
  *				Tatzberg 41
  *				01307 Dresden
  *	            Germany
+ *	            
+ *	   LICENSE: MIT License:
+ *	   			https://github.com/schmiedc/cellDisplacement_DZNE/blob/main/LICENSE
  *    			
  *        BUGS:
  *       NOTES: 
@@ -49,9 +52,9 @@ run("Options...", "iterations=1 count=1 black");
 #@ File (label = "Input directory", style = "directory") input
 #@ File (label = "Output directory", style = "directory") output
 #@ String (label = "File suffix", value = ".tif") suffix
-#@ Integer (label = "Detection Radius xy", value = 3) radiusxy 
-#@ Integer (label = "Detection Radius z", value = 3) radiusz 
-#@ Integer (label = "Detection Noise", value = 80) noise
+#@ Integer (label = "Detection radius xy", value = 3) radiusxy 
+#@ Integer (label = "Detection radius z", value = 3) radiusz 
+#@ Integer (label = "Detection noise", value = 80) noise
 
 // ============================================================================
 // save settings
