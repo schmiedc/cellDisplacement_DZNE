@@ -18,7 +18,7 @@
  * 
  *     VERSION: 2.0
  *     CREATED: 2017-02-09
- *    REVISION: 2021-08-10
+ *    REVISION: 2021-08-12
  */
 // ============================================================================
 // Advanced Settings
@@ -111,7 +111,7 @@ function processFile(input, output, file, C1, C2, projection, radius, rolling, t
 	
 	// Open image files 
 	run("Bio-Formats Importer", 
-	 	"open=" + input + File.separator + file + " " + 
+	 	"open=[" + input + File.separator + file + "] " + 
 	 	"autoscale " +
 	 	"color_mode=Default " +
 	 	"rois_import=[ROI manager] " +
@@ -154,7 +154,7 @@ function processFile(input, output, file, C1, C2, projection, radius, rolling, t
 	
 	// Extracts xy coordinates
 	print("Extracting pixel coordinates");
-	run("Save XY Coordinates...", "background=0 invert save=" + output + File.separator + height + "_" + file + "_" + C1 + ".txt");
+	run("Save XY Coordinates...", "background=0 invert save=[" + output + File.separator + height + "_" + file + "_" + C1 + ".txt]");
 	
 	// Saves mask image used for analysis
 	print("Saving results to: " + output );
@@ -171,7 +171,7 @@ function processFile(input, output, file, C1, C2, projection, radius, rolling, t
 	
 	// Extracts xy coordinates
 	print("Extracting pixel coordinates");
-	run("Save XY Coordinates...", "background=0 invert save=" + output  + File.separator + height + "_" + file + "_" + C2 + ".txt");
+	run("Save XY Coordinates...", "background=0 invert save=[" + output  + File.separator + height + "_" + file + "_" + C2 + ".txt]");
 	
 	// Saves mask image used for analysis
 	print("Saving results to: " + output );

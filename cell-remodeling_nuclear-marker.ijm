@@ -14,10 +14,10 @@
  *        BUGS:
  *       NOTES: 
  * DEPENDECIES: 3D ImageJ Suite: http://sites.imagej.net/Tboudier/
- * 				ImageScience: http://sites.imagej.net/ImageScience
+ * 				
  *     VERSION: 3.0
  *     CREATED: 2016-09-20
- *    REVISION: 2021-08-10
+ *    REVISION: 2021-08-12
  */
 // ============================================================================
 // Advanced settings
@@ -109,7 +109,7 @@ function processFile(input, output, file, radiusxy, radiusz, noise) {
 
 		// Open image files 
 	 	run("Bio-Formats Importer", 
-	 	"open=" + input + File.separator + file + " " + 
+	 	"open=[" + input + File.separator + file + "] " + 
 	 	"autoscale " +
 	 	"color_mode=Default " +
 	 	"rois_import=[ROI manager] " +
