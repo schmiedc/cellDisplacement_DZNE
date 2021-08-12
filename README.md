@@ -53,7 +53,8 @@ The ImageJ Updater window will pop up. Click Manage update sites and activate th
 
 ## Workflow execution
 
-Drag & Drop scripts into the Fiji toolbar. The scripts will be loaded into the Macro editor. Press **Run** for starting the script.  
+Drag & Drop scripts into the Fiji toolbar. The scripts will be loaded into the Macro editor. 
+Press **Run** for starting the script.  
 
 ### Analyze Nuclear Marker 
 
