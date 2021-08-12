@@ -8,26 +8,28 @@ Based on methods chapter: Wagner, Völkner, Schmied & Karl [in preparation].
 Included in the package are the scripts for the workflow as well as test files.  
 
 
-1. cell-remodeling_nuclear-marker.ijm 
+### cell-remodeling_nuclear-marker.ijm 
 
 Tissue ROI – aligned crop from a larger field of view 
-Single channel  
-Stack 
-TIFF 
-
-Test files: nuclear-marker 
+<ul>
+<li>Single channel</li>  
+<li>Stack</li> 
+<li>TIFF</li> 
+</ul>
+Test files: *nuclear-marker*
 
 Detects in 3D the position of nuclei using a nuclear marker. 
 Visualizes the location of the nuclei in 2D. 
 
-2. cell-remodeling_cytoplasmic-marker.ijm 
+### cell-remodeling_cytoplasmic-marker.ijm 
 
 Tissue ROI – aligned crop from a larger field of view 
-Dual channel 
-Stack  
-TIFF 
-
-Test files: cytoplasmic-marker 
+<ul>
+<li>Dual channel</li>
+<li>Stack</li> 
+<li>TIFF</li>
+</ul>
+Test files: *cytoplasmic-marker* 
 
 Performs an intensity based segmentation based on a cytoplasmatic marker. 
 Gives a location of each pixel that is above the threshold.
