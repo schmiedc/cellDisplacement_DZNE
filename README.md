@@ -5,7 +5,8 @@ Based on methods chapter: Wagner, Völkner, Schmied & Karl [in preparation].
 
 ## Scripts & accepted datasets
 
-Included in the package are the scripts for the workflow as well as test files.  
+Included in the package are the scripts for the workflow.
+Test files will be published on Zenodo.
 
 
 ### cell-remodeling_nuclear-marker.ijm 
@@ -65,8 +66,8 @@ Load *cell-remodeling_nuclear-marker.ijm*
 **Input directory:** Folder that contains the input file(s).  
 **Output directory:** were to save the result files.  
 **File suffix:** specify the suffix of the input files.  
-**Detection radius xy:** filter size in xy for the 3D Median filter.  
-**Detection radius z:** filter size for z for the 3D Median filter (anisotropy in z).  
+**Detection radius xy:** xy radius for the 3D Median filter.  
+**Detection radius z:**  z radius for the 3D Median filter (anisotropy in z).  
 **Detection noise:** noise setting for the 3D maxima finder – only local maxima are considered that are higher than this value.  
 
 Further documentation of the specific tools: 
