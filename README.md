@@ -66,8 +66,8 @@ Load *cell-remodeling_nuclear-marker.ijm*
 **Input directory:** Folder that contains the input file(s).  
 **Output directory:** were to save the result files.  
 **File suffix:** specify the suffix of the input files.  
-**Detection radius xy:** xy radius for the 3D Median filter.  
-**Detection radius z:**  z radius for the 3D Median filter (anisotropy in z).  
+**Detection radius xy:** xy radius for the 3D maxima finder.  
+**Detection radius z:**  z radius for the 3D maxima finder (anisotropy in z).  
 **Detection noise:** noise setting for the 3D maxima finder – only local maxima are considered that are higher than this value.  
 
 Further documentation of the specific tools: 
