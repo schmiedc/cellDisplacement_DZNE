@@ -1,5 +1,5 @@
 // ============================================================================
-/* pixelcoordinates
+/* Extract pixelcoordinates after segmentation
  * 
  * DESCRIPTION: Extracts coordinates of each pixel within a threshold
  * 				
@@ -122,6 +122,7 @@ function processFile(input, output, file, C1, C2, projection, radius, rolling, t
 	 	"stack_order=XYCZT");
 
 	originalTitle = getTitle();
+	nameWithout = File.nameWithoutExtension;
 	 	
 	// gets and prints image height in px
 	height = getHeight();
@@ -157,12 +158,12 @@ function processFile(input, output, file, C1, C2, projection, radius, rolling, t
 	
 	// Extracts xy coordinates
 	print("Extracting pixel coordinates");
-	run("Save XY Coordinates...", "background=0 invert save=[" + output + File.separator + height + "_" + file + "_" + C1 + ".txt]");
+	run("Save XY Coordinates...", "background=0 invert save=[" + output + File.separator + height + "_" + nameWithout + "_" + C1 + ".txt]");
 	
 	// Saves mask image used for analysis
 	print("Saving results to: " + output );
 	selectWindow("C1-" + title );
-	saveAs("Tiff", save_output_mask + File.separator + "Mask_" + file + "_" + C1);
+	saveAs("Tiff", save_output_mask + File.separator + "Mask_" + nameWithout + "_" + C1);
 	close();
 	
 	// Create mask for channel 2
@@ -174,12 +175,12 @@ function processFile(input, output, file, C1, C2, projection, radius, rolling, t
 	
 	// Extracts xy coordinates
 	print("Extracting pixel coordinates");
-	run("Save XY Coordinates...", "background=0 invert save=[" + output  + File.separator + height + "_" + file + "_" + C2 + ".txt]");
+	run("Save XY Coordinates...", "background=0 invert save=[" + output  + File.separator + height + "_" + nameWithout + "_" + C2 + ".txt]");
 	
 	// Saves mask image used for analysis
 	print("Saving results to: " + output );
 	selectWindow("C2-" + title );
-	saveAs("Tiff", save_output_mask + File.separator + "Mask_" + file + "_" + C2);
+	saveAs("Tiff", save_output_mask + File.separator + "Mask_" + nameWithout + "_" + C2);
 	close();
 	
 	// saves log file

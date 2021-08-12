@@ -54,7 +54,7 @@ run("Options...", "iterations=1 count=1 black");
 #@ String (label = "File suffix", value = ".tif") suffix
 #@ Integer (label = "Detection radius xy", value = 3) radiusxy 
 #@ Integer (label = "Detection radius z", value = 3) radiusz 
-#@ Integer (label = "Detection noise", value = 80) noise
+#@ Integer (label = "Detection noise", value = 20) noise
 
 // ============================================================================
 // save settings
@@ -101,8 +101,6 @@ function processFolder(input) {
 // takes images in input directory and performs processing
 
 function processFile(input, output, file, radiusxy, radiusz, noise) {
-
-		// sets processing without displaying images
 		
 		function saveImage(title2, name, output){
 				selectWindow(title2);
@@ -120,6 +118,7 @@ function processFile(input, output, file, radiusxy, radiusz, noise) {
 	 	"stack_order=XYCZT");
 
 		name=getTitle;
+		nameWithout = File.nameWithoutExtension;
 
 		// duplicate first stack
 		selectImage(name);
@@ -159,7 +158,7 @@ function processFile(input, output, file, radiusxy, radiusz, noise) {
 		selectWindow("Results"); 
 		setResult("Height", 0, height);
 		updateResults();
-		saveAs("Results", output + File.separator + name +"_Results.xls");
+		saveAs("Results", output + File.separator + nameWithout +"_Results.xls");
 		close("Results");
 
 		// detect 2D position of cells for visualization
@@ -191,8 +190,9 @@ function processFile(input, output, file, radiusxy, radiusz, noise) {
 
 			selectWindow(maxOrg);
 			roiManager("Select", 0);
-			saveImage(maxOrg, name + "_Detection", output);
-			saveAs("Selection", output + File.separator + name + "_Detection.roi");
+			saveImage(maxOrg, nameWithout + "_Detection", output);
+			
+			saveAs("Selection", output + File.separator + nameWithout + "_Detection.roi");
 			maxOrg = getTitle;
 
 			close(maxOrg);
