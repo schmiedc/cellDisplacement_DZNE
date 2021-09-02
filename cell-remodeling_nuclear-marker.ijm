@@ -17,6 +17,7 @@
  *        BUGS:
  *       NOTES: 
  * DEPENDECIES: 3D ImageJ Suite: http://sites.imagej.net/Tboudier/
+ * 				ImageScience: http://sites.imagej.net/ImageScience
  * 				
  *     VERSION: 3.0
  *     CREATED: 2016-09-20
