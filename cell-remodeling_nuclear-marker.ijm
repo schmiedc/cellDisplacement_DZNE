@@ -15,7 +15,10 @@
  *	   			https://github.com/schmiedc/cellDisplacement_DZNE/blob/main/LICENSE
  *    			
  *        BUGS:
- *       NOTES: 
+ *       NOTES: The ImageScience update site is important.
+ *       		If not added as an update site the 3D Filter fails silently
+ *       		leading to inconsistent results 
+ *       		
  * DEPENDECIES: 3D ImageJ Suite: http://sites.imagej.net/Tboudier/
  * 				ImageScience: http://sites.imagej.net/ImageScience
  * 				
